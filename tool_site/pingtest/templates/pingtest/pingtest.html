@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <h1>Ping Test</h1>
+    <form method="POST">
+        {% csrf_token %}
+    <div>
+        {{ form|crispy }}
+    </div>
+    <div class="form-group">
+        <button class="btn btn=outline-info" type="submit">Start Ping Test</button>
+    </div>
+    </form>
+{% endblock content %}
